@@ -1,0 +1,73 @@
+@import "@/assets/sass/buttons.sass"
+@import "@/assets/sass/messages.sass"
+
+.error-message
+  @include error-message
+
+.input-wrapper
+    box-shadow: 0px 0px 2px $primary-black-0-5
+    border-radius: 5px
+    display: grid
+    grid-template-columns: auto 1fr
+    height: 35px
+    padding: 8px 15.6px 6px 10.03px
+    margin: 15px 25px 0 22px
+
+    .search-button
+      cursor: pointer
+      border: 0
+      background-color: unset
+      outline: none
+      color: $secondary-light-gray
+
+    .search-button:disabled
+      cursor: not-allowed
+
+    .search-button:disabled .search-icon
+      color: $secondary-gray
+
+    .search-icon
+      font-size: 16px
+      margin-right: 10px
+
+    .search-input
+      font-weight: 600
+      font-size: 12px
+      line-height: 20px
+      border: none
+      outline: none
+      color: $primary-black
+
+.users-wrapper
+  padding: 0 14px 0px 16px
+  .user
+    display: flex
+    align-items: center
+    margin-top: 14px
+
+    .username
+      color: $secondary-blue
+      font-weight: 600
+      font-size: 15px
+      line-height: 36.4px
+      cursor: pointer
+
+    img
+      width: 50px
+      border: 5px solid $secondary-light-gray
+      border-radius: 50%
+      margin-right: 12px
+      margin-left: 3px
+
+  .user:first-child
+    margin-top: 42px
+
+  .user:last-child
+    margin-bottom: 91px
+
+  .user:not(:last-child)
+    padding-bottom: 11px
+    border-bottom: 0.5px solid $primary-black-0-5
+
+  .load-more
+    @include load-more-btn
