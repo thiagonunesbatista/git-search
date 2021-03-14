@@ -18,11 +18,11 @@
     justify-content: center
     align-items: center
     flex-direction: column
+    position: relative
 
     .cover-photo
       position: absolute
       top: 0
-      z-index: -1
       height: 145px
 
     .profile-photo
@@ -30,6 +30,7 @@
       width: 120px
       margin: 42px auto 10px
       border: 5px solid $tertiary-light-gray
+      z-index: 1
 
     .name-wrapper
       width: 100%
