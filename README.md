@@ -50,7 +50,7 @@ Deploy was made using [Vercel](https://vercel.com/). It's available [here](https
 Using SSH
 
 ```shell
-git@github.com:thiagonunesbatista/git-search.git
+git clone git@github.com:thiagonunesbatista/git-search.git
 ```
 
 Or using HTTP
