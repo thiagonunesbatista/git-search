@@ -1,0 +1,317 @@
+.error-message
+  color: $primary-red
+  padding: 10px
+  font-weight: 600
+
+.profile-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  max-width: 100vw
+  overflow: hidden
+  min-height: calc(100vh - 60px)
+
+  .personal-info-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    .cover-photo
+      position: absolute
+      top: 0
+      z-index: -1
+      height: 145px
+
+    .profile-photo
+      border-radius: 50%
+      width: 120px
+      margin: 42px auto 10px
+      border: 5px solid $tertiary-light-gray
+
+    .name-wrapper
+      width: 100%
+      text-align: center
+
+      .name
+        font-size: 24px
+        font-weight: 600
+        line-height: 36.4px
+        color: $secondary-blue
+
+      .username-wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 23px
+
+        .username
+          font-size: 16px
+          font-weight: 400
+          line-height: 22px
+          color: $primary-gray
+
+        .user-icon
+          color: $primary-gray
+          margin-right: 7px
+          font-size: 10px
+
+    .stats-wrapper
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      padding: 0 10px
+      width: 100%
+
+      .stat-group
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: $secondary-blue
+        font-weight: 600
+        font-size: 14px
+        line-height: 20px
+
+        & > div
+          display: flex
+
+          .fa-icon
+            margin-right: 8px
+
+        .fa-icon
+          font-size: 18px
+          margin-bottom: 4.55px
+          color: $secondary-blue
+
+  .tabs-wrapper
+    width: 100%
+
+    .tabs-button-wrapper
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      width: 100%
+      height: 50px
+      margin-top: 30px
+
+      .tab-button
+        font-weight: 500
+        font-size: 16px
+        line-height: 22px
+        color: $primary-black
+        background-color: $secondary-white
+        border: none
+        outline: none
+        cursor: pointer
+        transition: transform 0.1s
+
+      .tab-button:hover
+        filter: brightness(0.9)
+        transform: scale(1.1)
+
+      .tab-button:first-child
+        border-right: 1px solid $primary-light-gray
+
+      .tab-button.active
+        border-bottom: 3px solid $secondary-light-blue
+
+    .bio-wrapper
+      padding: 30px 20px 55px
+      width: 100%
+
+      .title
+        font-weight: 600
+        font-size: 18px
+        line-height: 25.2px
+        color: $secondary-blue
+        margin-bottom: 10px
+
+      .description
+        font-weight: 400
+        font-size: 16px
+        line-height: 22.4px
+        margin-bottom: 20px
+        color: $secondary-black
+
+      .bio-group
+        display: flex
+        line-height: 40px
+        font-weight: 600
+        font-size: 16px
+        align-items: center
+        color: $secondary-blue
+
+        .fa-icon
+          margin-right: 13px
+
+        .blog
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          color: inherit
+
+    .repos-wrapper
+      padding: 30px 20px 108px
+
+      .repo:not(:last-child)
+        border-bottom: 1px solid $primary-black-0-5
+        margin-bottom: 16px
+
+    .repo
+      line-height: 20.6px
+      font-weight: 600
+      color: $secondary-gray
+      padding-bottom: 7px
+
+      .project-title
+        font-size: 14px
+        color: $primary-light-blue
+        margin-left: 7.72px
+
+      .description
+        font-size: 10px
+        margin: 0 0 4px 16.41px
+
+      .repo-info
+        display: flex
+        font-size: 8px
+        justify-content: space-between
+
+        .last-push
+          margin-left: auto
+
+        .language-wrapper
+          display: flex
+          align-items: center
+
+          .language
+            margin-left: 6.56px
+            color: $secondary-gray
+
+          .language-circle
+            display: inline-block
+            width: 10px
+            height: 10px
+            border-radius: 50%
+
+    .repos-quantity-info
+      margin: 32px 0
+      width: max-content
+      display: block
+      color: $primary-blue
+      background: none
+      border: none
+      cursor: pointer
+      font-size: 16px
+      line-height: 22px
+      font-weight: 600
+
+    .repos-quantity-info.disabled
+      cursor: default
+      text-decoration: underline
+
+    .repos-quantity-info:not(.disabled):hover
+      filter: brightness(0.5)
+
+@media (min-width: 481px)
+  .personal-info-wrapper .cover-photo
+    width: 100%
+
+@media (min-width: 769px)
+  .profile-wrapper
+    max-width: 860px
+    margin: 0 auto
+    position: relative
+    box-shadow: 0px 0px 4px $primary-black-0-5
+    display: grid
+    grid-template-rows: auto 1fr
+
+    .personal-info-wrapper
+      display: flex
+      flex-direction: row
+      max-height: 200px
+
+      .cover-photo
+        max-width: 859px
+        height: 200px
+
+      .profile-photo
+        width: 170px
+        margin: 163px 36px 0 13px
+
+      .stats-wrapper
+        max-width: 300px
+        margin: auto 0 0 auto
+
+      .name-wrapper
+        display: flex
+        flex-direction: column
+        text-align: right
+        width: max-content
+        margin: auto auto 0 0
+
+        .username-wrapper
+          margin: 0 0 15px auto
+          width: max-content
+
+    .tabs-wrapper
+      display: grid
+      grid-template-columns: 200px 1fr
+      width: 100%
+      height: 100%
+
+      .tabs-button-wrapper
+        display: flex
+        flex-direction: column
+        border-right: 1px solid $tertiary-gray
+        height: 100%
+        margin: 0
+
+        .tab-button
+          height: 50px
+
+        .tab-button:first-child
+          margin-top: 80px
+          border-bottom: 1px solid $primary-light-gray
+
+        .tab-button.active
+          border-right: 3px solid $secondary-light-blue
+
+        .tab-button.active:not(:first-child)
+          border-bottom: none
+
+      .bio-wrapper
+        padding: 40px 39px 32px 60px
+
+        .description
+          text-align: justify
+          margin-bottom: 40px
+
+      .repos-wrapper
+        padding: 44px 60px 0px
+
+        .repo
+          display: grid
+          grid-template-columns: 1fr auto
+          grid-template-areas: 'title title' 'description language'
+          margin-bottom: 10px
+
+
+          .project-title
+            grid-area: title
+            margin-left: 0px
+
+          .description
+            grid-area: description
+            padding-right: 29px
+            padding-bottom: 6px
+
+          .repo-info
+            grid-area: language
+            flex-direction: column
+            justify-content: flex-start
+
+          .last-push
+            position: relative
+            top: -8px
+            margin-left: 6.56px

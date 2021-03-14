@@ -1,0 +1,61 @@
+.navbar-wrapper
+  height: 50px
+  background-color: $primary-white
+  display: flex
+  align-items: flex-end
+  padding: 13px 10px 0
+  position: sticky
+  top: 0
+  z-index: 10
+
+.arrow-group
+  width: 100%
+  border-bottom: 1px solid $primary-gray
+  display: flex
+  align-items: center
+  padding-bottom: 13.5px
+  cursor: pointer
+
+  .arrow
+    color: $primary-gray
+    font-size: 24px
+    padding: 4px 3px
+    margin-right: 10px
+    width: 50px
+
+  .title
+    font-weight: 600
+    font-size: 14px
+    line-height: 20.6px
+    color: $secondary-black
+    cursor: inherit
+
+.logo-link-wrapper
+  display: none
+
+@media (min-width: 769px)
+  .navbar-wrapper
+    border: none
+    box-shadow: 0px 4px 5px $primary-black-0-5
+    height: 60px
+    padding: 0
+
+  .arrow-group
+    display: none
+
+  .logo-link-wrapper
+    display: flex
+    height: 100%
+    align-items: center
+    width: 100%
+    max-width: 860px
+    margin: 0 auto
+
+    .logo-title
+      font-size: 20px
+      font-weight: 600
+      line-height: 22px
+      margin-left: 3.73px
+      color: $primary-black
+      cursor: pointer
+

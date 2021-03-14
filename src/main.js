@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
-import './assets/global.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -11,6 +10,7 @@ import {
   faHome,
   faLaptop,
   faMale,
+  faSearch,
   faUser,
   faUsers
 } from '@fortawesome/free-solid-svg-icons'
@@ -21,6 +21,7 @@ library.add(faFolderOpen)
 library.add(faHome)
 library.add(faLaptop)
 library.add(faMale)
+library.add(faSearch)
 library.add(faUser)
 library.add(faUsers)
 
