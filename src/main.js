@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { RouterLink } from 'vue-router'
 
 import App from './App.vue'
 import router from './router'
@@ -28,4 +29,5 @@ library.add(faUsers)
 createApp(<App />)
   .use(router)
   .component('FontAwesomeIcon', FontAwesomeIcon)
+  .component('Link', RouterLink)
   .mount('#app')

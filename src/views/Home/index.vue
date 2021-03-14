@@ -11,16 +11,16 @@
     />
 
     <section class="buttons-container">
-      <router-link
+      <Link
         class="button"
         :to="{
           name: 'UsersList'
         }"
       >
         Ver Todos
-      </router-link>
+      </Link>
 
-      <router-link
+      <Link
         custom
         :to="{
           name: 'UsersList',
@@ -37,7 +37,7 @@
         >
           Buscar
         </button>
-      </router-link>
+      </Link>
     </section>
   </section>
 </template>
