@@ -4,16 +4,19 @@
 
   <p v-if="error" class="error-message">{{ error }}</p>
 
-  <div v-if="!error">
-    <div class="input-wrapper">
-      <button
-        @click="handleSearch"
-        :disabled="searchInput.length === 0"
-        class="search-button"
-      >
-        <FontAwesomeIcon icon="search" class="search-icon" />
-      </button>
-      <input v-model="searchInput" type="text" class="search-input" />
+  <div v-if="!error" class="list-wrapper">
+    <div class="title-wrapper">
+      <h1 class="list-title">Resultados da Busca</h1>
+      <div class="input-wrapper">
+        <button
+          @click="handleSearch"
+          :disabled="searchInput.length === 0"
+          class="search-button"
+        >
+          <FontAwesomeIcon icon="search" class="search-icon" />
+        </button>
+        <input v-model="searchInput" type="text" class="search-input" />
+      </div>
     </div>
 
     <div class="users-wrapper">
@@ -28,20 +31,25 @@
         }"
         class="user"
       >
-        <img :src="user.avatar_url" alt="user.login" />
+        <img
+          :src="user.avatar_url"
+          alt="user.login"
+          class="user-profile-photo"
+        />
         <p class="username">{{ user.login }}</p>
       </Link>
-
+    </div>
+    <div>
       <button
         v-if="!finishedUsers && nextLink"
         @click="loadMoreUsers(nextLink === lastLink)"
         class="load-more"
       >
-        Carregar mais
+        Carregar outros usuários
       </button>
 
       <button v-else class="load-more disabled">
-        Não há mais repositórios
+        Não há mais usuários
       </button>
     </div>
   </div>
@@ -134,9 +142,7 @@ export default {
 
         const isSearch = Boolean(this.searchInput && this.lastLink)
 
-        this.users = isSearch
-          ? [...this.users, ...response.data.items]
-          : [...this.users, ...response.data]
+        this.users = isSearch ? response.data.items : response.data
 
         this.nextLink =
           response.headers?.link &&
