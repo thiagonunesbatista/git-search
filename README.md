@@ -30,13 +30,16 @@ Deploy was made using [Vercel](https://vercel.com/). It's available [here](https
 
 ## 📱 Git Search (Mobile - Screenshots)
 
-<img alt="homepage"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/home.png" style="margin: 32px 0; width: 250px" />
+<div>
+ <img alt="homepage"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/home.png" width="250px" />
+ <img alt="user search page"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/list-search-users.png" width="250px" />
+</div>
 
-<img alt="user search page"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/list-search-users.png" style="margin: 32px 0; width: 250px" />
+<div>
+ <img alt="user profile page, about section"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/about-user-profile.png" width="250px" />
 
-<img alt="user profile page, about section"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/about-user-profile.png" style="margin: 32px 0; width: 250px" />
-
-<img alt="user profile page, repositories section"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/user-repos-profile.png" style="margin: 32px 0; width: 250px" />
+ <img alt="user profile page, repositories section"  src="https://raw.githubusercontent.com/thiagonunesbatista/git-search/main/github-assets/user-repos-profile.png" width="250px" />
+</div>
 
 ## ⚙️ How to setup and run the project
 
