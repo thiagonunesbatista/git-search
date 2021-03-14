@@ -190,8 +190,6 @@ export default {
         this.repos = userRepos.data
         this.languageColors = colors.data
 
-        console.log(colors)
-
         this.nextLink =
           userRepos.headers?.link &&
           parseURLPagination(userRepos.headers.link, 'next')
