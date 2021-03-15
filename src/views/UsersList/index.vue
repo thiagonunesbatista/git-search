@@ -99,12 +99,15 @@ export default {
 
         this.users = searchParam ? response.data.items : response.data
 
+        const hasLinkHeader = response?.headers?.link
+
         this.nextLink =
-          response.headers?.link &&
-          parseURLPagination(response.headers.link, 'next')
+          hasLinkHeader && parseURLPagination(response.headers.link, 'next')
 
         this.lastLink =
-          searchParam && parseURLPagination(response.headers.link, 'last')
+          searchParam && hasLinkHeader
+            ? parseURLPagination(response.headers.link, 'last')
+            : ''
       } catch (error) {
         this.error = 'Erro interno. Entre em contato com o desenvolvedor!'
       } finally {
