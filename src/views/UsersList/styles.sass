@@ -1,7 +1,6 @@
 @import "@/assets/sass/buttons.sass"
 @import "@/assets/sass/messages.sass"
 
-
 .error-message
   @include error-message
 
@@ -20,6 +19,7 @@
       height: 35px
       padding: 8px 15.6px 6px 10.03px
       margin: 15px 25px 0 22px
+      background-color: $primary-white
 
       .search-button
         cursor: pointer
@@ -60,6 +60,10 @@
       font-size: 15px
       line-height: 36.4px
       cursor: pointer
+      max-width: 120px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
 
     .user-profile-photo
       width: 50px
@@ -124,8 +128,8 @@
 
 @media (min-width: 481px) and (max-width: 768px)
   .list-wrapper
-    width: min-content
-    max-width: 100%
+    width: 100%
+    max-width: 500px
 
     .users-wrapper
       display: grid
@@ -137,6 +141,7 @@
     .title-wrapper
       .input-wrapper
         margin-left: 0
+        margin-right: 0
 
 @media (min-width: 769px)
   .list-wrapper

@@ -1,9 +1,3 @@
-import { createApp } from 'vue'
-import { RouterLink } from 'vue-router'
-
-import App from './App.vue'
-import router from './router'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faArrowLeft,
@@ -16,6 +10,13 @@ import {
   faUsers
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { createApp } from 'vue'
+import { RouterLink } from 'vue-router'
+
+import App from './App.vue'
+import router from './router'
+
+import '@/assets/sass/global.sass'
 
 library.add(faArrowLeft)
 library.add(faFolderOpen)
