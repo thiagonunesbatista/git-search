@@ -69,12 +69,12 @@
         <p v-if="user.bio" class="description">{{ user.bio }}</p>
 
         <div v-if="user.location" class="bio-group">
-          <FontAwesomeIcon icon="laptop" class="fa-icon" />
+          <FontAwesomeIcon icon="home" class="fa-icon" />
           <p>{{ user.location }}</p>
         </div>
 
         <div v-if="user.blog" class="bio-group">
-          <FontAwesomeIcon icon="home" class="fa-icon" />
+          <FontAwesomeIcon icon="laptop" class="fa-icon" />
           <a target="_blank" :href="user.blog" class="blog">{{ user.blog }}</a>
         </div>
       </div>
